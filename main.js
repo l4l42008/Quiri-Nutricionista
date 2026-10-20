@@ -1522,6 +1522,9 @@ app.post(
                 id_paciente:
                     id_paciente,
 
+                id_nutricionista:
+                    paciente.id_nutricionista,
+
                 titulo:
                     titulo
 

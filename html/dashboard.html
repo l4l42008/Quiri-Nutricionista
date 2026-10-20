@@ -4109,6 +4109,11 @@ async function salvarDieta() {
 
     }
 
+    var uidNutricionista =
+    localStorage.getItem(
+        "uidNutricionista"
+    );
+
     try {
 
         var resposta =
@@ -4123,9 +4128,12 @@ async function salvarDieta() {
                     },
 
                     body: JSON.stringify({
-
+                        
                         id_paciente:
                             paciente,
+
+                        id_nutricionista:
+                            uidNutricionista,
 
                         titulo:
                             titulo,

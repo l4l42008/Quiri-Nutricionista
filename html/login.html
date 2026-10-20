@@ -17,18 +17,6 @@
 
 <style>
 
-  /* cores usadas na pagina */
-  :root{
-    --cream:#f9e9d2;
-    --cream-soft:#fdf3e6;
-    --dark:#282828;
-    --dark-soft:#3a3a3a;
-    --green:#18482d;
-    --green-deep:#103420;
-    --green-mid:#456854;
-    --green-light:#7b947a;
-  }
-
   /* reseta os espacamentos padrao */
   *{ margin:0; padding:0; box-sizing:border-box; }
 
@@ -38,9 +26,9 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    background:var(--cream);
+    background:#f9e9d2;
     font-family:'Montserrat',sans-serif;
-    color:var(--dark);
+    color:#282828;
     padding:40px 20px;
   }
 
@@ -66,7 +54,7 @@
     font-family:'Caveat',cursive;
     font-weight:600;
     font-size:1.55rem;
-    color:var(--green-mid);
+    color:#456854;
     text-align:center;
     margin-bottom:34px;
     letter-spacing:.01em;
@@ -96,7 +84,7 @@
     display:flex;
     align-items:center;
     gap:12px;
-    background:var(--dark);
+    background:#282828;
     border-radius:8px;
     height:52px;
     padding:0 16px;
@@ -106,12 +94,12 @@
 
   /* destaca o campo qdo ele esta selecionado */
   .field-wrap:focus-within{
-    border-color:var(--green-mid);
+    border-color:#456854;
   }
 
   /* icone dos campos */
   .field-wrap i.field-icon{
-    color:var(--cream);
+    color:#f9e9d2;
     font-size:.95rem;
     width:16px;
     text-align:center;
@@ -143,7 +131,7 @@
   .toggle-pass{
     background:none;
     border:none;
-    color:var(--cream);
+    color:#f9e9d2;
     opacity:.75;
     font-size:.9rem;
     cursor:pointer;
@@ -172,18 +160,18 @@
     appearance:none;
     width:15px;
     height:15px;
-    border:1.5px solid var(--green-mid);
+    border:1.5px solid #456854;
     border-radius:3px;
     cursor:pointer;
     position:relative;
     flex-shrink:0;
-    background:var(--cream-soft);
+    background:#fdf3e6;
   }
 
   /* checkbox marcado */
   .remember input:checked{
-    background:var(--green);
-    border-color:var(--green);
+    background:#18482d;
+    border-color:#18482d;
   }
 
   /* marca do checkbox */
@@ -194,7 +182,7 @@
     top:1px;
     width:4px;
     height:8px;
-    border:solid var(--cream);
+    border:solid #f9e9d2;
     border-width:0 2px 2px 0;
     transform:rotate(45deg);
   }
@@ -221,7 +209,7 @@
   .forgot{
 display:table;
 margin:0 auto;
-color:var(--green-mid);
+color:#456854;
 text-decoration:none;
 font-weight:700;
 text-transform:uppercase;
@@ -232,8 +220,8 @@ transition:color .15s ease;
 
   /* efeito do link qdo passa o mouse */
   .forgot:hover{
-    color:var(--green);
-    border-color:var(--green-mid);
+    color:#18482d;
+    border-color:#456854;
   }
 
   /* botao principal */
@@ -242,8 +230,8 @@ transition:color .15s ease;
     height:54px;
     border:none;
     border-radius:10px;
-    background:var(--green);
-    color:var(--cream-soft);
+    background:#18482d;
+    color:#fdf3e6;
     font-family:'Montserrat',sans-serif;
     font-weight:800;
     font-size:.95rem;
@@ -255,7 +243,7 @@ transition:color .15s ease;
 
   /* efeito do botao qdo passa o mouse */
   .btn-primary:hover{
-    background:var(--green-deep);
+    background:#103420;
     transform:translateY(-1px);
     box-shadow:0 6px 16px -8px rgba(16,52,32,.6);
   }
@@ -283,41 +271,41 @@ transition:color .15s ease;
     right:0;
     top:50%;
     height:1px;
-    background:var(--green-light);
+    background:#7b947a;
     opacity:.35;
   }
 
   /* conteudo do separador */
   .divider span{
     position:relative;
-    background:var(--cream);
+    background:#f9e9d2;
     padding:0 16px;
     font-family:'Caveat',cursive;
     font-weight:600;
     font-size:1.25rem;
-    color:var(--green-mid);
+    color:#456854;
   }
 
   /* texto de cadastro */
   .signup-link{
     text-align:center;
     font-size:.78rem;
-    color:var(--green-mid);
+    color:#456854;
     letter-spacing:.02em;
   }
 
   /* link de cadastro */
   .signup-link a{
-    color:var(--green);
+    color:#18482d;
     font-weight:800;
     text-decoration:none;
-    border-bottom:1.5px solid var(--green-light);
+    border-bottom:1.5px solid #7b947a;
     transition:border-color .15s ease;
   }
 
   /* efeito do link de cadastro */
   .signup-link a:hover{
-    border-color:var(--green);
+    border-color:#18482d;
   }
 
   /* ajustes pra telas menores */
@@ -333,7 +321,7 @@ transition:color .15s ease;
 
   /* destaque de acessibilidade ao navegar pelo teclado */
   :focus-visible{
-    outline:2px solid var(--green-mid);
+    outline:2px solid #456854;
     outline-offset:2px;
   }
 </style>
