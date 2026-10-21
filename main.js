@@ -680,7 +680,7 @@ app.get(
             // busca os relatorios
             const relatoriosSnapshot =
                 await banco
-                    .collection("relatorio")
+                    .collection("relatorios")
                     .get();
 
             // transforma os relatorios em uma lista
@@ -1980,7 +1980,7 @@ app.post(
             // cria o relatorio no firestore
             const novoRelatorio =
                 await banco
-                    .collection("relatorio")
+                    .collection("relatorios")
                     .add({
 
                         titulo:
@@ -2078,7 +2078,7 @@ app.put(
             // busca o relatorio
             const relatorioDocumento =
                 await banco
-                    .collection("relatorio")
+                    .collection("relatorios")
                     .doc(id)
                     .get();
 
@@ -2139,7 +2139,7 @@ app.put(
 
             // atualiza o relatorio no firestore
             await banco
-                .collection("relatorio")
+                .collection("relatorios")
                 .doc(id)
                 .update({
 
@@ -2218,7 +2218,7 @@ app.delete(
             // busca o relatorio
             const relatorioDocumento =
                 await banco
-                    .collection("relatorio")
+                    .collection("relatorios")
                     .doc(id)
                     .get();
 
@@ -2283,7 +2283,7 @@ app.delete(
 
             // apaga o relatorio do firestore
             await banco
-                .collection("relatorio")
+                .collection("relatorios")
                 .doc(id)
                 .delete();
 
