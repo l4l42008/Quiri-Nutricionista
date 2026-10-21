@@ -32,7 +32,7 @@
     padding:40px 20px;
   }
 
-  /* bloco principal */
+  /* organiza o formulario de login */
   .card{
     width:100%;
     max-width:380px;
@@ -66,16 +66,6 @@
     display:flex;
     flex-direction:column;
     gap:14px;
-  }
-
-  /* esconde o label sem tirar ele da acessibilidade */
-  .field label{
-    position:absolute;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    clip:rect(0 0 0 0);
-    white-space:nowrap;
   }
 
   /* caixa dos campos */
@@ -341,8 +331,6 @@ transition:color .15s ease;
 
       <!-- campo login -->
       <div class="field">
-        <label for="login">E-mail ou usuário</label>
-
         <div class="field-wrap">
           <i class="field-icon fa-solid fa-envelope" aria-hidden="true"></i>
 
@@ -358,8 +346,6 @@ transition:color .15s ease;
 
       <!-- campo senha -->
       <div class="field">
-        <label for="password">Senha</label>
-
         <div class="field-wrap">
           <i class="field-icon fa-solid fa-lock"></i>
 
@@ -367,7 +353,7 @@ transition:color .15s ease;
             id="password"
             name="password"
             type="password"
-            placeholder="PASSWORD"
+            placeholder="SENHA"
             autocomplete="current-password"
             required
           >
