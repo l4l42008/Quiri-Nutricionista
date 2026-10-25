@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
@@ -10,110 +11,110 @@
     <!-- carrega as fontes usadas na pagina -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Montserrat:wght@500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- carrega os icones -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         /* reseta espacamentos padrao dos elementos */
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         /* organiza o conteudo principal no centro da tela */
-        body{
-            min-height:100vh;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            background:#f9e9d2;
-            font-family:'Montserrat',sans-serif;
-            color:#282828;
-            padding:40px 20px;
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9e9d2;
+            font-family: 'Montserrat', sans-serif;
+            color: #282828;
+            padding: 40px 20px;
         }
 
         /* define o tamanho e organiza os elementos do cartao */
-        .card{
-            width:100%;
-            max-width:380px;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            text-align:center;
+        .card {
+            width: 100%;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         /* define o tamanho e o espacamento da logo */
-        .logo{
-            width:190px;
-            height:auto;
-            display:block;
-            margin:0 auto 30px;
+        .logo {
+            width: 190px;
+            height: auto;
+            display: block;
+            margin: 0 auto 30px;
         }
 
         /* estiliza o texto abaixo da logo */
-        .tagline{
-            font-family:'Caveat',cursive;
-            font-weight:600;
-            font-size:1.55rem;
-            color:#456854;
-            text-align:center;
-            margin-bottom:34px;
-            letter-spacing:.01em;
+        .tagline {
+            font-family: 'Caveat', cursive;
+            font-weight: 600;
+            font-size: 1.55rem;
+            color: #456854;
+            text-align: center;
+            margin-bottom: 34px;
+            letter-spacing: .01em;
         }
 
         /* estiliza o titulo da pagina */
-        h2{
-            color:#18482d;
-            font-size:1.35rem;
-            font-weight:800;
-            letter-spacing:.03em;
-            text-transform:uppercase;
-            margin-bottom:12px;
+        h2 {
+            color: #18482d;
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: .03em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         /* estiliza a mensagem de cadastro realizado */
-        .message{
-            color:#456854;
-            font-size:.78rem;
-            line-height:1.7;
-            max-width:330px;
-            margin-bottom:20px;
+        .message {
+            color: #456854;
+            font-size: .78rem;
+            line-height: 1.7;
+            max-width: 330px;
+            margin-bottom: 20px;
         }
 
         /* cria a caixa q mostra o email cadastrado */
-        .email-box{
-            width:100%;
-            padding:14px 16px;
-            border-radius:8px;
-            background:#282828;
-            color:#fdf3e6;
-            font-family:'Montserrat',sans-serif;
-            font-size:.7rem;
-            font-weight:600;
-            letter-spacing:.04em;
-            word-break:break-word;
-            margin-bottom:22px;
+        .email-box {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 8px;
+            background: #282828;
+            color: #fdf3e6;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .7rem;
+            font-weight: 600;
+            letter-spacing: .04em;
+            word-break: break-word;
+            margin-bottom: 22px;
         }
 
         /* estiliza o botao de ir pro login */
-        .btn-primary{
-            width:100%;
-            height:54px;
-            border:none;
-            border-radius:10px;
-            background:#18482d;
-            color:#fdf3e6;
-            font-family:'Montserrat',sans-serif;
-            font-weight:800;
-            font-size:.95rem;
-            letter-spacing:.18em;
-            text-transform:uppercase;
-            cursor:pointer;
+        .btn-primary {
+            width: 100%;
+            height: 54px;
+            border: none;
+            border-radius: 10px;
+            background: #18482d;
+            color: #fdf3e6;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: .95rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            cursor: pointer;
             transition:
                 background .2s ease,
                 transform .12s ease,
@@ -121,36 +122,41 @@
         }
 
         /* muda o visual do botao qdo passa o mouse */
-        .btn-primary:hover{
-            background:#103420;
-            transform:translateY(-1px);
+        .btn-primary:hover {
+            background: #103420;
+            transform: translateY(-1px);
             box-shadow:
-                0 6px 16px -8px
-                rgba(16,52,32,.6);
+                0 6px 16px -8px rgba(16, 52, 32, .6);
         }
 
         /* tira o movimento do botao qdo ele e clicado */
-        .btn-primary:active{
-            transform:translateY(0);
+        .btn-primary:active {
+            transform: translateY(0);
         }
 
         /* estiliza o texto de retorno */
-        .back-text{
-            margin-top:22px;
-            font-size:.7rem;
-            color:#456854;
-            letter-spacing:.04em;
+        .back-text {
+            margin-top: 22px;
+            font-size: .7rem;
+            color: #456854;
+            letter-spacing: .04em;
         }
 
         /* diminui alguns elementos em telas pequenas */
-        @media (max-width:340px){
-            .logo{width:160px;}
-            .tagline{font-size:1.35rem;}
+        @media (max-width:340px) {
+            .logo {
+                width: 160px;
+            }
+
+            .tagline {
+                font-size: 1.35rem;
+            }
         }
 
         /* mostra um contorno qdo um elemento recebe foco pelo teclado */
-        :focus-visible{outline:2px solid #456854;
-                       outline-offset:2px;
+        :focus-visible {
+            outline: 2px solid #456854;
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -161,9 +167,7 @@
     <main class="card">
 
         <!-- mostra a logo do quiri -->
-        <img class="logo"
-             src="../imagens/logoquiri.png"
-             alt="logo quiri">
+        <img class="logo" src="../imagens/logoquiri.png" alt="logo quiri">
 
         <!-- mostra o titulo de cadastro realizado -->
         <h2>
@@ -176,13 +180,11 @@
         </p>
 
         <!-- mostra o email usado no cadastro -->
-        <p id="emailUsuario"
-           class="email-box">
+        <p id="emailUsuario" class="email-box">
         </p>
 
         <!-- leva o usuario de volta pra tela de login -->
-        <button class="btn-primary"
-                onclick="irParaLogin()">
+        <button class="btn-primary" onclick="irParaLogin()">
             Ir para o login
         </button>
     </main>
@@ -216,7 +218,7 @@
         }
 
         // volta pra tela de login
-        function irParaLogin(){
+        function irParaLogin() {
 
             // muda a pagina atual pro login
             window.location.href =
@@ -224,4 +226,5 @@
         }
     </script>
 </body>
+
 </html>

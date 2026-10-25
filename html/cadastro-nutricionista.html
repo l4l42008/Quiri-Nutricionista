@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
@@ -8,231 +9,224 @@
     <title>Quiri — Criar conta</title>
 
     <!-- carrega as fontes usadas na pagina -->
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Montserrat:wght@500;600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- carrega os icones usados nos campos -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         /* reseta os espacamentos padrao dos elementos */
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         /* organiza o conteudo principal no centro da tela */
-        body{
-            min-height:100vh;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            background:#f9e9d2;
-            font-family:'Montserrat',sans-serif;
-            color:#282828;
-            padding:40px 20px;
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9e9d2;
+            font-family: 'Montserrat', sans-serif;
+            color: #282828;
+            padding: 40px 20px;
         }
 
         /* define o tamanho e a organizacao do cartao */
-        .card{
-            width:100%;
-            max-width:380px;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
+        .card {
+            width: 100%;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* define o tamanho e o espacamento da logo */
-        .logo{
-            width:190px;
-            height:auto;
-            display:block;
-            margin:0 auto 20px;
+        .logo {
+            width: 190px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
         }
 
         /* estiliza o texto abaixo da logo */
-        .tagline{
-            font-family:'Caveat',cursive;
-            font-weight:600;
-            font-size:1.55rem;
-            color:#456854;
-            text-align:center;
-            margin-bottom:30px;
-            letter-spacing:.01em;
+        .tagline {
+            font-family: 'Caveat', cursive;
+            font-weight: 600;
+            font-size: 1.55rem;
+            color: #456854;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: .01em;
         }
 
         /* estiliza o titulo do cadastro */
-        .cadastro-titulo{
-            color:#18482d;
-            font-size:1.15rem;
-            font-weight:800;
-            letter-spacing:.08em;
-            text-transform:uppercase;
-            text-align:center;
-            margin-bottom:22px;
+        .cadastro-titulo {
+            color: #18482d;
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 22px;
         }
 
         /* organiza os campos do formulario */
-        form{
-            width:100%;
-            display:flex;
-            flex-direction:column;
-            gap:12px;
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
         /* define o tamanho de cada campo */
-        .field{
-            width:100%;
+        .field {
+            width: 100%;
         }
 
         /* esconde o label visualmente, mas mantem ele no html */
-        .field label{
-            position:absolute;
-            width:1px;
-            height:1px;
-            overflow:hidden;
-            clip:rect(0 0 0 0);
-            white-space:nowrap;
+        .field label {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
         }
 
         /* monta a caixa escura usada nos campos */
-        .field-wrap{
-            position:relative;
-            display:flex;
-            align-items:center;
-            gap:12px;
-            background:#282828;
-            border-radius:8px;
-            min-height:52px;
-            padding:0 16px;
-            border:1.5px solid transparent;
-            transition:border-color .2s ease;
+        .field-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #282828;
+            border-radius: 8px;
+            min-height: 52px;
+            padding: 0 16px;
+            border: 1.5px solid transparent;
+            transition: border-color .2s ease;
         }
 
         /* destaca o campo qdo ele esta selecionado */
-        .field-wrap:focus-within{
-            border-color:#456854;
+        .field-wrap:focus-within {
+            border-color: #456854;
         }
 
         /* estiliza os icones dos campos */
-        .field-wrap i.field-icon{
-            color:#f9e9d2;
-            font-size:.95rem;
-            width:16px;
-            text-align:center;
-            flex-shrink:0;
+        .field-wrap i.field-icon {
+            color: #f9e9d2;
+            font-size: .95rem;
+            width: 16px;
+            text-align: center;
+            flex-shrink: 0;
         }
 
         /* estiliza os campos de texto */
-        .field-wrap input{
-            flex:1;
-            width:100%;
-            min-width:0;
-            background:transparent;
-            border:none;
-            outline:none;
-            color:#ffffff;
-            font-family:'Montserrat',sans-serif;
-            font-weight:700;
-            font-size:.72rem;
-            letter-spacing:.08em;
+        .field-wrap input {
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: .72rem;
+            letter-spacing: .08em;
         }
 
         /* define a cor dos textos de exemplo dos campos */
-        .field-wrap input::placeholder{
-            color:#d9d4cb;
-            opacity:.65;
+        .field-wrap input::placeholder {
+            color: #d9d4cb;
+            opacity: .65;
         }
 
         /* aumenta o espacamento das letras da senha */
-        .field-wrap input[type="password"]{
-            letter-spacing:.12em;
+        .field-wrap input[type="password"] {
+            letter-spacing: .12em;
         }
 
         /* estiliza o botao de mostrar a senha */
-        .toggle-pass{
-            background:none;
-            border:none;
-            color:#f9e9d2;
-            opacity:.75;
-            font-size:.9rem;
-            cursor:pointer;
-            padding:6px;
-            flex-shrink:0;
-            transition:opacity .15s ease;
+        .toggle-pass {
+            background: none;
+            border: none;
+            color: #f9e9d2;
+            opacity: .75;
+            font-size: .9rem;
+            cursor: pointer;
+            padding: 6px;
+            flex-shrink: 0;
+            transition: opacity .15s ease;
         }
 
         /* deixa o icone mais visivel qdo passa o mouse */
-        .toggle-pass:hover{
-            opacity:1;
+        .toggle-pass:hover {
+            opacity: 1;
         }
 
         /* cria a barra q mostra a forca da senha */
-        .password-strength{
-            background:#dfe8df;
-            border-radius:2px;
-            height:4px;
-            margin-top:5px;
-            overflow:hidden;
+        .password-strength {
+            background: #dfe8df;
+            border-radius: 2px;
+            height: 4px;
+            margin-top: 5px;
+            overflow: hidden;
         }
 
         /* define a parte preenchida da barra de forca */
-        #pw-bar{
-            height:4px;
-            border-radius:2px;
-            width:0;
+        #pw-bar {
+            height: 4px;
+            border-radius: 2px;
+            width: 0;
             transition:
                 width .3s,
                 background .3s;
         }
 
         /* esconde as mensagens de erro por padrao */
-        .error-msg{
-            display:none;
-            color:#c0625a;
-            margin-top:4px;
-            font-size:.68rem;
-            font-weight:600;
+        .error-msg {
+            display: none;
+            color: #c0625a;
+            margin-top: 4px;
+            font-size: .68rem;
+            font-weight: 600;
         }
 
         /* mostra a mensagem qdo o erro e ativado */
-        .error-msg.show{
-            display:block;
+        .error-msg.show {
+            display: block;
         }
 
         /* destaca o campo q possui erro */
-        .input-error{
-            border-color:#c0625a !important;
+        .input-error {
+            border-color: #c0625a !important;
         }
 
         /* estiliza o botao de criar conta */
-        .btn-primary{
-            margin-top:8px;
-            width:100%;
-            height:54px;
-            border:none;
-            border-radius:10px;
-            background:#18482d;
-            color:#fdf3e6;
-            font-family:'Montserrat',sans-serif;
-            font-weight:800;
-            font-size:.95rem;
-            letter-spacing:.16em;
-            text-transform:uppercase;
-            cursor:pointer;
+        .btn-primary {
+            margin-top: 8px;
+            width: 100%;
+            height: 54px;
+            border: none;
+            border-radius: 10px;
+            background: #18482d;
+            color: #fdf3e6;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: .95rem;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            cursor: pointer;
             transition:
                 background .2s ease,
                 transform .12s ease,
@@ -240,126 +234,123 @@
         }
 
         /* muda o visual do botao qdo passa o mouse */
-        .btn-primary:hover{
-            background:#103420;
-            transform:translateY(-1px);
+        .btn-primary:hover {
+            background: #103420;
+            transform: translateY(-1px);
             box-shadow:
-                0 6px 16px -8px
-                rgba(16,52,32,.6);
+                0 6px 16px -8px rgba(16, 52, 32, .6);
         }
 
         /* tira o movimento qdo o botao e clicado */
-        .btn-primary:active{
-            transform:translateY(0);
+        .btn-primary:active {
+            transform: translateY(0);
         }
 
         /* organiza a divisao antes do link de login */
-        .divider{
-            width:100%;
-            display:flex;
-            align-items:center;
-            gap:12px;
-            margin:22px 0 16px;
+        .divider {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 22px 0 16px;
         }
 
         /* cria as linhas da divisao */
-        .divider span{
-            flex:1;
-            height:1px;
-            background:rgba(69,104,84,.28);
+        .divider span {
+            flex: 1;
+            height: 1px;
+            background: rgba(69, 104, 84, .28);
         }
 
         /* estiliza o texto de qm ja possui conta */
-        .auth-link{
-            color:#456854;
-            font-size:.7rem;
-            letter-spacing:.04em;
-            text-align:center;
+        .auth-link {
+            color: #456854;
+            font-size: .7rem;
+            letter-spacing: .04em;
+            text-align: center;
         }
 
         /* estiliza o link pra entrar */
-        .auth-link a{
-            color:#18482d;
-            font-weight:800;
-            text-decoration:none;
+        .auth-link a {
+            color: #18482d;
+            font-weight: 800;
+            text-decoration: none;
         }
 
 
         /* muda a cor do link qdo passa o mouse */
-        .auth-link a:hover{
-            color:#103420;
+        .auth-link a:hover {
+            color: #103420;
         }
 
         /* cria a mensagem q aparece temporariamente na tela */
-        .toast{
-            position:fixed;
-            top:20px;
-            left:50%;
-            transform:translateX(-50%) translateY(-20px);
-            opacity:0;
-            pointer-events:none;
-            padding:12px 18px;
-            border-radius:8px;
-            color:#ffffff;
-            font-size:.75rem;
-            font-weight:700;
-            text-align:center;
-            z-index:9999;
+        .toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: .75rem;
+            font-weight: 700;
+            text-align: center;
+            z-index: 9999;
             transition:
                 opacity .2s ease,
                 transform .2s ease;
-            max-width:calc(100% - 40px);
+            max-width: calc(100% - 40px);
         }
 
         /* mostra a mensagem qdo a classe show e adicionada */
-        .toast.show{
-            opacity:1;
-            transform:translateX(-50%) translateY(0);
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
         }
 
         /* mostra um contorno qdo um elemento recebe foco */
-        :focus-visible{
-            outline:2px solid #456854;
-            outline-offset:2px;
+        :focus-visible {
+            outline: 2px solid #456854;
+            outline-offset: 2px;
         }
 
         /* ajusta a pagina pra telas bem pequenas */
-        @media (max-width:340px){
-            .logo{
-                width:160px;
+        @media (max-width:340px) {
+            .logo {
+                width: 160px;
             }
 
-            .tagline{
-                font-size:1.35rem;
+            .tagline {
+                font-size: 1.35rem;
             }
 
-            body{
-                padding:30px 16px;
+            body {
+                padding: 30px 16px;
             }
         }
 
         /* desativa as animacoes pra qm prefere menos movimento */
-        @media (prefers-reduced-motion:reduce){
+        @media (prefers-reduced-motion:reduce) {
+
             .btn-primary,
             .field-wrap,
             .toast,
-            #pw-bar{
-                transition:none;
+            #pw-bar {
+                transition: none;
             }
         }
-
     </style>
 </head>
+
 <body>
 
     <!-- conteudo principal da tela de cadastro -->
     <main class="card">
 
         <!-- mostra a logo do quiri -->
-        <img
-            class="logo"
-            src="../imagens/logoquiri.png"
-            alt="logo quiri">
+        <img class="logo" src="../imagens/logoquiri.png" alt="logo quiri">
 
         <!-- mostra o titulo da tela -->
         <h2 class="cadastro-titulo">
@@ -367,15 +358,11 @@
         </h2>
 
         <!-- recebe as mensagens rapidas do sistema -->
-        <div class="toast"
-             id="toast">
+        <div class="toast" id="toast">
         </div>
 
         <!-- formulario usado pra criar conta -->
-        <form
-            id="formCadastro"
-            autocomplete="on"
-            onsubmit="event.preventDefault(); efetuarCadastro();">
+        <form id="formCadastro" autocomplete="on" onsubmit="event.preventDefault(); efetuarCadastro();">
 
             <!-- campo pra o nome do nutricionista -->
             <div class="field">
@@ -386,16 +373,10 @@
 
                 <div class="field-wrap">
 
-                    <i class="field-icon fa-solid fa-user"
-                       aria-hidden="true">
+                    <i class="field-icon fa-solid fa-user" aria-hidden="true">
                     </i>
 
-                    <input
-                        type="text"
-                        id="cad-nome"
-                        placeholder="NOME COMPLETO"
-                        maxlength="100"
-                        autocomplete="name">
+                    <input type="text" id="cad-nome" placeholder="NOME COMPLETO" maxlength="100" autocomplete="name">
                 </div>
             </div>
 
@@ -408,16 +389,10 @@
 
                 <div class="field-wrap">
 
-                    <i class="field-icon fa-solid fa-id-card"
-                       aria-hidden="true">
+                    <i class="field-icon fa-solid fa-id-card" aria-hidden="true">
                     </i>
 
-                    <input
-                        type="text"
-                        id="cad-cpf"
-                        placeholder="CPF"
-                        maxlength="14"
-                        autocomplete="off">
+                    <input type="text" id="cad-cpf" placeholder="CPF" maxlength="14" autocomplete="off">
 
                 </div>
             </div>
@@ -431,16 +406,10 @@
 
                 <div class="field-wrap">
 
-                    <i class="field-icon fa-solid fa-certificate"
-                       aria-hidden="true">
+                    <i class="field-icon fa-solid fa-certificate" aria-hidden="true">
                     </i>
 
-                    <input
-                        type="text"
-                        id="cad-crn"
-                        placeholder="CRN"
-                        maxlength="30"
-                        autocomplete="off">
+                    <input type="text" id="cad-crn" placeholder="CRN" maxlength="30" autocomplete="off">
 
                 </div>
             </div>
@@ -454,15 +423,10 @@
 
                 <div class="field-wrap">
 
-                    <i class="field-icon fa-solid fa-envelope"
-                       aria-hidden="true">
+                    <i class="field-icon fa-solid fa-envelope" aria-hidden="true">
                     </i>
 
-                    <input
-                        type="email"
-                        id="cad-email"
-                        placeholder="E-MAIL PROFISSIONAL"
-                        maxlength="255"
+                    <input type="email" id="cad-email" placeholder="E-MAIL PROFISSIONAL" maxlength="255"
                         autocomplete="email">
 
                 </div>
@@ -477,16 +441,10 @@
 
                 <div class="field-wrap">
 
-                    <i class="field-icon fa-solid fa-phone"
-                       aria-hidden="true">
+                    <i class="field-icon fa-solid fa-phone" aria-hidden="true">
                     </i>
 
-                    <input
-                        type="tel"
-                        id="cad-tel"
-                        placeholder="TELEFONE"
-                        maxlength="15"
-                        autocomplete="tel">
+                    <input type="tel" id="cad-tel" placeholder="TELEFONE" maxlength="15" autocomplete="tel">
                 </div>
             </div>
 
@@ -499,27 +457,16 @@
 
                 <div class="field-wrap">
 
-                    <i class="field-icon fa-solid fa-lock"
-                       aria-hidden="true">
+                    <i class="field-icon fa-solid fa-lock" aria-hidden="true">
                     </i>
 
-                    <input
-                        type="password"
-                        id="cad-senha"
-                        placeholder="MÍNIMO 6 CARACTERES"
-                        minlength="6"
-                        autocomplete="new-password"
-                        oninput="checkPwStrength(this.value)">
+                    <input type="password" id="cad-senha" placeholder="MÍNIMO 6 CARACTERES" minlength="6"
+                        autocomplete="new-password" oninput="checkPwStrength(this.value)">
 
                     <!-- permite mostrar ou esconder a senha -->
-                    <button
-                        type="button"
-                        class="toggle-pass"
-                        id="togglePass1"
-                        aria-label="Mostrar senha">
+                    <button type="button" class="toggle-pass" id="togglePass1" aria-label="Mostrar senha">
 
-                        <i class="fa-solid fa-eye"
-                           aria-hidden="true">
+                        <i class="fa-solid fa-eye" aria-hidden="true">
                         </i>
                     </button>
                 </div>
@@ -537,46 +484,30 @@
                     Confirmar senha
                 </label>
 
-                <div
-                    class="field-wrap"
-                    id="senha2-wrap">
+                <div class="field-wrap" id="senha2-wrap">
 
-                    <i class="field-icon fa-solid fa-lock"
-                       aria-hidden="true">
+                    <i class="field-icon fa-solid fa-lock" aria-hidden="true">
                     </i>
 
-                    <input
-                        type="password"
-                        id="cad-senha2"
-                        placeholder="REPITA A SENHA"
-                        minlength="6"
+                    <input type="password" id="cad-senha2" placeholder="REPITA A SENHA" minlength="6"
                         autocomplete="new-password">
 
                     <!-- permite mostrar ou esconder a confirmacao da senha -->
-                    <button
-                        type="button"
-                        class="toggle-pass"
-                        id="togglePass2"
-                        aria-label="Mostrar senha">
+                    <button type="button" class="toggle-pass" id="togglePass2" aria-label="Mostrar senha">
 
-                        <i class="fa-solid fa-eye"
-                           aria-hidden="true">
+                        <i class="fa-solid fa-eye" aria-hidden="true">
                         </i>
                     </button>
                 </div>
 
                 <!-- mostra o erro qdo as senhas forem diferentes -->
-                <div
-                    class="error-msg"
-                    id="err-senha2">
+                <div class="error-msg" id="err-senha2">
                     As senhas não coincidem.
                 </div>
             </div>
 
             <!-- envia os dados do cadastro -->
-            <button
-                type="submit"
-                class="btn-primary">
+            <button type="submit" class="btn-primary">
                 Criar conta
             </button>
         </form>
@@ -609,7 +540,7 @@
 
             t.classList.add('show');
 
-            setTimeout(function() {
+            setTimeout(function () {
                 t.classList.remove('show');
             }, 3000);
         }
@@ -623,7 +554,7 @@
             botao.addEventListener(
                 'click',
 
-                function() {
+                function () {
                     var escondida =
                         campo.type === 'password';
 
@@ -805,9 +736,9 @@
                     await fetch(
                         '/api/nutricionista/cadastro',
                         {
-                            method:'POST',
+                            method: 'POST',
 
-                            headers:{
+                            headers: {
                                 'Content-Type':
                                     'application/json'
                             },
@@ -826,7 +757,7 @@
 
                     // vai pra tela de cadastro concluido
                     setTimeout(
-                        function() {
+                        function () {
 
                             window.location.href =
                                 'auth-pendente.html?email='
@@ -865,4 +796,5 @@
 
     </script>
 </body>
+
 </html>

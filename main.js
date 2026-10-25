@@ -564,8 +564,8 @@ app.get(
 
                                 pacienteNome:
                                     paciente
-                                    ? paciente.nome
-                                    : "Paciente não informado"
+                                        ? paciente.nome
+                                        : "Paciente não informado"
                             };
 
                         }
@@ -621,8 +621,8 @@ app.get(
 
                                 pacienteNome:
                                     paciente
-                                    ? paciente.nome
-                                    : "Paciente não informado"
+                                        ? paciente.nome
+                                        : "Paciente não informado"
                             };
 
                         }
@@ -1325,7 +1325,7 @@ app.delete(
                 uidNutricionista &&
                 consulta.id_nutricionista &&
                 consulta.id_nutricionista !==
-                    uidNutricionista
+                uidNutricionista
             ) {
 
                 return res.status(403).json({
@@ -1701,7 +1701,7 @@ app.put(
             if (
                 uidNutricionista &&
                 paciente.id_nutricionista !==
-                    uidNutricionista
+                uidNutricionista
             ) {
 
                 return res.status(403).json({
@@ -1851,7 +1851,7 @@ app.delete(
             if (
                 uidNutricionista &&
                 paciente.id_nutricionista !==
-                    uidNutricionista
+                uidNutricionista
             ) {
 
                 return res.status(403).json({
@@ -2125,7 +2125,7 @@ app.put(
             if (
                 uidNutricionista &&
                 paciente.id_nutricionista !==
-                    uidNutricionista
+                uidNutricionista
             ) {
 
                 return res.status(403).json({
@@ -2269,7 +2269,7 @@ app.delete(
             if (
                 uidNutricionista &&
                 paciente.id_nutricionista !==
-                    uidNutricionista
+                uidNutricionista
             ) {
 
                 return res.status(403).json({

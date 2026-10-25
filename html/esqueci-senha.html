@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
@@ -8,22 +9,18 @@
     <title>Quiri — Redefinir senha</title>
 
     <!-- fontes usadas na pagina -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Montserrat:wght@500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- biblioteca de icnes -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-
         /* reseta os espacamentos padrao */
         * {
             margin: 0;
@@ -123,7 +120,7 @@
             padding: 0 16px;
             border: 1.5px solid transparent;
             transition: border-color .2s ease,
-                        transform .12s ease;
+                transform .12s ease;
         }
 
         /* destaca o campo qdo ele esta selecionado */
@@ -194,16 +191,15 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: background .2s ease,
-                        transform .12s ease,
-                        box-shadow .2s ease;
+                transform .12s ease,
+                box-shadow .2s ease;
         }
 
         /* efeito do botao qdo passa o mouse */
         .btn-primary:hover {
             background: #103420;
             transform: translateY(-1px);
-            box-shadow: 0 6px 16px -8px
-                      rgba(16,52,32,.6);
+            box-shadow: 0 6px 16px -8px rgba(16, 52, 32, .6);
         }
 
         /* efeito do botao qdo clica */
@@ -239,17 +235,14 @@
                 font-size: 1.35rem;
             }
         }
-
-</style>
+    </style>
 </head>
 
 <body>
 
     <!-- conteudo principal da pagina -->
     <main class="card">
-        <img class="logo"
-             src="/imagens/logoquiri.png"
-             alt="logo quiri">
+        <img class="logo" src="/imagens/logoquiri.png" alt="logo quiri">
 
         <!-- titulo -->
         <h1 class="title">
@@ -262,8 +255,7 @@
         </p>
 
         <!-- formulari de redefinicao -->
-        <form id="formRedefinirSenha"
-              autocomplete="on">
+        <form id="formRedefinirSenha" autocomplete="on">
 
             <div class="field">
                 <label for="email">
@@ -272,35 +264,26 @@
 
                 <!-- campo do email -->
                 <div class="field-wrap">
-                    <i class="field-icon fa-solid fa-envelope"
-                       aria-hidden="true">
+                    <i class="field-icon fa-solid fa-envelope" aria-hidden="true">
                     </i>
 
-                    <input id="email"
-                           name="email"
-                           type="email"
-                           placeholder="E-MAIL"
-                           autocomplete="email"
-                           required>
+                    <input id="email" name="email" type="email" placeholder="E-MAIL" autocomplete="email" required>
                 </div>
 
                 <!-- mensagem de erro do email -->
-                <p id="err-email"
-                   class="error-message">
+                <p id="err-email" class="error-message">
                     Digite um e-mail válido.
                 </p>
             </div>
 
             <!-- envia o pedido de redefinicao -->
-            <button type="submit"
-                    class="btn-primary">
+            <button type="submit" class="btn-primary">
                 Enviar link
             </button>
         </form>
 
         <!-- volta pra pagina de login -->
-        <a class="back-login"
-           href="login.html">
+        <a class="back-login" href="login.html">
             Voltar para o login
         </a>
     </main>
@@ -309,4 +292,5 @@
     <script type="module" src="../js/esqueci-senha.js"></script>
 
 </body>
+
 </html>
