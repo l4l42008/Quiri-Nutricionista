@@ -56,7 +56,7 @@ formulario.addEventListener("submit", async function (evento) {
 
             // depois de 1,5 segundo volta pro login
             setTimeout(function () {
-                window.location.href = "login.html";
+                window.location.href = "index.html";
             }, 1500);
         }
 

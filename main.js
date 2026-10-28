@@ -22,8 +22,8 @@ const chaveApiFirebase =
 // cria a aplicacao express
 const app = express();
 
-// define a porta do servidor
-const PORTA = 3000;
+// define a porta em q o servidor vai rodar
+const PORTA = process.env.PORT || 3000;
 
 // permite q o back receba dados em formato json
 app.use(express.json());
@@ -2323,24 +2323,7 @@ app.delete(
 
 
 // inicia o servidor
-app.listen(
-    PORTA,
-    function () {
-
-        // mostra no terminal q o servidor foi iniciado
-        console.log(
-            "Servidor iniciado"
-        );
-
-        // mostra o endereco pra acessar o sistema
-        console.log(
-            "Acesse: http://localhost:3000"
-        );
-
-        // confirma a conexao com o firebase
-        console.log(
-            "Firebase conectado"
-        );
-
-    }
-);
+app.listen(PORTA, "0.0.0.0", () => {
+    console.log("Servidor iniciado");
+    console.log(`Porta utilizada: ${PORTA}`);
+});
