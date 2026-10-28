@@ -1,16 +1,9 @@
 {
-  "name": "testeiv",
-  "version": "1.0.0",
-  "description": "",
-  "main": "teste.firebase.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node main.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^5.2.1",
-    "firebase-admin": "^14.2.0"
+    "firebase-admin": "^14.5.0"
   }
 }
