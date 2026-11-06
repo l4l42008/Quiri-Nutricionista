@@ -10,9 +10,7 @@
 
     <!-- fontes usadas na pagina -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Montserrat:wght@500;600;700;800&display=swap"
         rel="stylesheet">
@@ -41,7 +39,7 @@
         }
 
         /* bloco principal da pagina */
-        .card {
+        .cartao-principal {
             width: 100%;
             max-width: 380px;
             display: flex;
@@ -50,26 +48,15 @@
         }
 
         /* logo */
-        .logo {
+        .logo-quiri {
             width: 190px;
             height: auto;
             display: block;
             margin: 0 auto 25px;
         }
 
-        /* frase abaixo da logo */
-        .tagline {
-            font-family: 'Caveat', cursive;
-            font-weight: 600;
-            font-size: 1.55rem;
-            color: #456854;
-            text-align: center;
-            margin-bottom: 34px;
-            letter-spacing: .01em;
-        }
-
         /* titulo da pagina */
-        .title {
+        .titulo-pagina {
             width: 100%;
             text-align: center;
             color: #18482d;
@@ -81,7 +68,7 @@
         }
 
         /* texto de explicacao */
-        .description {
+        .texto-explicativo {
             width: 100%;
             text-align: center;
             color: #456854;
@@ -99,7 +86,7 @@
         }
 
         /* esconde o label sem tirar ele da acessibilidade */
-        .field label {
+        .campo-formulario label {
             position: absolute;
             width: 1px;
             height: 1px;
@@ -109,7 +96,7 @@
         }
 
         /* caixa do campo */
-        .field-wrap {
+        .caixa-campo {
             position: relative;
             display: flex;
             align-items: center;
@@ -124,12 +111,12 @@
         }
 
         /* destaca o campo qdo ele esta selecionado */
-        .field-wrap:focus-within {
+        .caixa-campo:focus-within {
             border-color: #456854;
         }
 
         /* icone do campo */
-        .field-wrap i.field-icon {
+        .caixa-campo i.icone-campo {
             color: #f9e9d2;
             font-size: .95rem;
             width: 16px;
@@ -138,7 +125,7 @@
         }
 
         /* campo de entrada */
-        .field-wrap input {
+        .caixa-campo input {
             flex: 1;
             width: 100%;
             background: transparent;
@@ -153,13 +140,13 @@
         }
 
         /* texto q aparece antes de digitar */
-        .field-wrap input::placeholder {
+        .caixa-campo input::placeholder {
             color: #d9d4cb;
             opacity: .65;
         }
 
         /* mensagem de erro */
-        .error-message {
+        .mensagem-erro {
             display: none;
             color: #c0625a;
             margin-top: 5px;
@@ -167,17 +154,17 @@
         }
 
         /* mostra a mensagem de erro */
-        .error-message.show {
+        .mensagem-erro.exibir {
             display: block;
         }
 
         /* destaca o campo com erro */
-        .input-error {
+        .campo-com-erro {
             border: 1px solid #c0625a !important;
         }
 
         /* botao principal */
-        .btn-primary {
+        .botao-principal {
             margin-top: 10px;
             height: 54px;
             border: none;
@@ -196,19 +183,19 @@
         }
 
         /* efeito do botao qdo passa o mouse */
-        .btn-primary:hover {
+        .botao-principal:hover {
             background: #103420;
             transform: translateY(-1px);
             box-shadow: 0 6px 16px -8px rgba(16, 52, 32, .6);
         }
 
         /* efeito do botao qdo clica */
-        .btn-primary:active {
+        .botao-principal:active {
             transform: translateY(0);
         }
 
         /* link pra voltar pro login */
-        .back-login {
+        .link-voltar-login {
             display: table;
             margin: 22px auto 0;
             color: #456854;
@@ -221,18 +208,14 @@
         }
 
         /* muda a cor do link qdo passa o mouse */
-        .back-login:hover {
+        .link-voltar-login:hover {
             color: #18482d;
         }
 
         /* ajustes pra telas menores */
         @media (max-width: 340px) {
-            .logo {
+            .logo-quiri {
                 width: 160px;
-            }
-
-            .tagline {
-                font-size: 1.35rem;
             }
         }
     </style>
@@ -241,49 +224,49 @@
 <body>
 
     <!-- conteudo principal da pagina -->
-    <main class="card">
-        <img class="logo" src="/imagens/logoquiri.png" alt="logo quiri">
+    <main class="cartao-principal">
+        <img class="logo-quiri" src="/imagens/logoquiri.png" alt="logo quiri">
 
         <!-- titulo -->
-        <h1 class="title">
+        <h1 class="titulo-pagina">
             Redefinir senha
         </h1>
 
         <!-- explicacao do q fazer -->
-        <p class="description">
+        <p class="texto-explicativo">
             Digite seu e-mail e enviaremos um link para redefinir sua senha.
         </p>
 
-        <!-- formulari de redefinicao -->
+        <!-- formulario de redefinicao -->
         <form id="formRedefinirSenha" autocomplete="on">
 
-            <div class="field">
+            <div class="campo-formulario">
                 <label for="email">
                     E-mail
                 </label>
 
                 <!-- campo do email -->
-                <div class="field-wrap">
-                    <i class="field-icon fa-solid fa-envelope" aria-hidden="true">
+                <div class="caixa-campo">
+                    <i class="icone-campo fa-solid fa-envelope" aria-hidden="true">
                     </i>
 
                     <input id="email" name="email" type="email" placeholder="E-MAIL" autocomplete="email" required>
                 </div>
 
                 <!-- mensagem de erro do email -->
-                <p id="err-email" class="error-message">
+                <p id="err-email" class="mensagem-erro">
                     Digite um e-mail válido.
                 </p>
             </div>
 
             <!-- envia o pedido de redefinicao -->
-            <button type="submit" class="btn-primary">
+            <button type="submit" class="botao-principal">
                 Enviar link
             </button>
         </form>
 
         <!-- volta pra pagina de login -->
-        <a class="back-login" href="index.html">
+        <a class="link-voltar-login" href="index.html">
             Voltar para o login
         </a>
     </main>

@@ -39,7 +39,7 @@
     }
 
     /* organiza o formulario de login */
-    .card {
+    .cartao-principal {
       width: 100%;
       max-width: 380px;
       display: flex;
@@ -48,7 +48,7 @@
     }
 
     /* logo */
-    .logo {
+    .logo-quiri {
       width: 190px;
       height: auto;
       display: block;
@@ -56,7 +56,7 @@
     }
 
     /* frase abaixo da logo */
-    .tagline {
+    .frase-destaque {
       font-family: 'Caveat', cursive;
       font-weight: 600;
       font-size: 1.55rem;
@@ -75,7 +75,7 @@
     }
 
     /* caixa dos campos */
-    .field-wrap {
+    .caixa-campo {
       position: relative;
       display: flex;
       align-items: center;
@@ -89,12 +89,12 @@
     }
 
     /* destaca o campo qdo ele esta selecionado */
-    .field-wrap:focus-within {
+    .caixa-campo:focus-within {
       border-color: #456854;
     }
 
     /* icone dos campos */
-    .field-wrap i.field-icon {
+    .caixa-campo i.icone-campo {
       color: #f9e9d2;
       font-size: .95rem;
       width: 16px;
@@ -103,7 +103,7 @@
     }
 
     /* campos de entrada */
-    .field-wrap input {
+    .caixa-campo input {
       flex: 1;
       width: 100%;
       background: transparent;
@@ -118,13 +118,13 @@
     }
 
     /* texto q aparece antes de digitar */
-    .field-wrap input::placeholder {
+    .caixa-campo input::placeholder {
       color: #d9d4cb;
       opacity: .65;
     }
 
     /* botao de mostrar ou esconder senha */
-    .toggle-pass {
+    .alternar-senha {
       background: none;
       border: none;
       color: #f9e9d2;
@@ -137,12 +137,12 @@
     }
 
     /* efeito do botao da senha */
-    .toggle-pass:hover {
+    .alternar-senha:hover {
       opacity: 1;
     }
 
     /* linha com opcoes do login */
-    .row {
+    .linha-opcoes {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -151,40 +151,8 @@
       letter-spacing: .04em;
     }
 
-    /* checkbox de lembrar login */
-    .remember input {
-      appearance: none;
-      width: 15px;
-      height: 15px;
-      border: 1.5px solid #456854;
-      border-radius: 3px;
-      cursor: pointer;
-      position: relative;
-      flex-shrink: 0;
-      background: #fdf3e6;
-    }
-
-    /* checkbox marcado */
-    .remember input:checked {
-      background: #18482d;
-      border-color: #18482d;
-    }
-
-    /* marca do checkbox */
-    .remember input:checked::after {
-      content: '';
-      position: absolute;
-      left: 4px;
-      top: 1px;
-      width: 4px;
-      height: 8px;
-      border: solid #f9e9d2;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-    }
-
     /* mensagem de erro */
-    .error-message {
+    .mensagem-erro {
       display: none;
       color: #c0625a;
       margin-top: 5px;
@@ -192,17 +160,17 @@
     }
 
     /* mostra a mensagem de erro */
-    .error-message.show {
+    .mensagem-erro.exibir {
       display: block;
     }
 
     /* destaca o campo com erro */
-    .input-error {
+    .campo-com-erro {
       border: 1px solid #c0625a !important;
     }
 
     /* link de esqueci a senha */
-    .forgot {
+    .link-recuperar-senha {
       display: table;
       margin: 0 auto;
       color: #456854;
@@ -215,13 +183,13 @@
     }
 
     /* efeito do link qdo passa o mouse */
-    .forgot:hover {
+    .link-recuperar-senha:hover {
       color: #18482d;
       border-color: #456854;
     }
 
     /* botao principal */
-    .btn-primary {
+    .botao-principal {
       margin-top: 10px;
       height: 54px;
       border: none;
@@ -238,19 +206,19 @@
     }
 
     /* efeito do botao qdo passa o mouse */
-    .btn-primary:hover {
+    .botao-principal:hover {
       background: #103420;
       transform: translateY(-1px);
       box-shadow: 0 6px 16px -8px rgba(16, 52, 32, .6);
     }
 
     /* efeito do botao qdo clica */
-    .btn-primary:active {
+    .botao-principal:active {
       transform: translateY(0);
     }
 
     /* separador */
-    .divider {
+    .divisor {
       position: relative;
       width: 100%;
       display: flex;
@@ -260,7 +228,7 @@
     }
 
     /* linha do separador */
-    .divider::before {
+    .divisor::before {
       content: '';
       position: absolute;
       left: 0;
@@ -272,7 +240,7 @@
     }
 
     /* conteudo do separador */
-    .divider span {
+    .divisor span {
       position: relative;
       background: #f9e9d2;
       padding: 0 16px;
@@ -283,7 +251,7 @@
     }
 
     /* texto de cadastro */
-    .signup-link {
+    .link-cadastro {
       text-align: center;
       font-size: .78rem;
       color: #456854;
@@ -291,7 +259,7 @@
     }
 
     /* link de cadastro */
-    .signup-link a {
+    .link-cadastro a {
       color: #18482d;
       font-weight: 800;
       text-decoration: none;
@@ -300,17 +268,17 @@
     }
 
     /* efeito do link de cadastro */
-    .signup-link a:hover {
+    .link-cadastro a:hover {
       border-color: #18482d;
     }
 
     /* ajustes pra telas menores */
     @media (max-width:340px) {
-      .logo {
+      .logo-quiri {
         width: 160px;
       }
 
-      .tagline {
+      .frase-destaque {
         font-size: 1.35rem;
       }
     }
@@ -324,72 +292,71 @@
 </head>
 
 <body>
-  <main class="card">
+  <main class="cartao-principal">
 
     <!-- logo -->
-    <img class="logo" src="/imagens/logoquiri.png" alt="logo quiri">
+    <img class="logo-quiri" src="/imagens/logoquiri.png" alt="logo quiri">
 
     <!-- frase debaixo da logo -->
-    <p class="tagline">A melhor ferramenta para você!</p>
+    <p class="frase-destaque">A melhor ferramenta para você!</p>
 
     <!-- formulario de login -->
     <form id="formLogin" autocomplete="on">
 
       <!-- campo login -->
-      <div class="field">
-        <div class="field-wrap">
-          <i class="field-icon fa-solid fa-envelope" aria-hidden="true"></i>
+      <div class="campo-formulario">
+        <div class="caixa-campo">
+          <i class="icone-campo fa-solid fa-envelope" aria-hidden="true"></i>
 
           <input id="login" name="login" type="text" placeholder="E-MAIL" required>
         </div>
       </div>
 
       <!-- campo senha -->
-      <div class="field">
-        <div class="field-wrap">
-          <i class="field-icon fa-solid fa-lock"></i>
+      <div class="campo-formulario">
+        <div class="caixa-campo">
+          <i class="icone-campo fa-solid fa-lock"></i>
 
           <input id="password" name="password" type="password" placeholder="SENHA" autocomplete="current-password"
             required>
 
           <!-- botao pra mostrar ou esconder a senha -->
-          <button type="button" class="toggle-pass" id="togglePass">
+          <button type="button" class="alternar-senha" id="togglePass">
             <i class="fa-solid fa-eye"></i>
           </button>
         </div>
 
         <!-- mensagem de erro do login -->
-        <p id="err-login" class="error-message">
+        <p id="err-login" class="mensagem-erro">
           E-mail ou senha incorretos.
         </p>
       </div>
 
       <!-- link pra recuperar a senha -->
-      <a class="forgot" href="esqueci-senha.html">Esqueceu a senha?</a>
-      </div>
+      <a class="link-recuperar-senha" href="esqueci-senha.html">Esqueceu a senha?</a>
 
-      <!-- envia o formlario -->
-      <button type="submit" class="btn-primary">
+      <!-- envia o formulario -->
+      <button type="submit" class="botao-principal">
         Entrar
       </button>
     </form>
 
     <!-- separador da tela -->
-    <div class="divider">
+    <div class="divisor">
       <span></span>
     </div>
 
     <!-- link pra criar uma conta -->
-    <p class="signup-link">
+    <p class="link-cadastro">
       Não tem conta?
-      <a href="cadastro.html">Cadastre-se</a>
+      <a href="cadastro-nutricionista.html">Cadastre-se</a>
     </p>
 
   </main>
 
   <script>
 
-    // pega os elementos do formulari
+    // pega os elementos do formulario
     const formularioLogin = document.getElementById("formLogin");
     const campoLogin = document.getElementById("login");
     const campoSenha = document.getElementById("password");
@@ -429,10 +396,10 @@
       const senha = campoSenha.value;
 
       // limpa a mensagem de erro anterior
-      mensagemErro.classList.remove("show");
+      mensagemErro.classList.remove("exibir");
 
-      campoLogin.parentElement.classList.remove("input-error");
-      campoSenha.parentElement.classList.remove("input-error");
+      campoLogin.parentElement.classList.remove("campo-com-erro");
+      campoSenha.parentElement.classList.remove("campo-com-erro");
 
       try {
 
@@ -461,10 +428,10 @@
           mensagemErro.textContent =
             resultado.mensagem || "E-mail ou senha incorretos.";
 
-          mensagemErro.classList.add("show");
+          mensagemErro.classList.add("exibir");
 
-          campoLogin.parentElement.classList.add("input-error");
-          campoSenha.parentElement.classList.add("input-error");
+          campoLogin.parentElement.classList.add("campo-com-erro");
+          campoSenha.parentElement.classList.add("campo-com-erro");
 
           return;
         }
@@ -485,7 +452,7 @@
         mensagemErro.textContent =
           "Erro ao conectar com o servidor.";
 
-        mensagemErro.classList.add("show");
+        mensagemErro.classList.add("exibir");
       }
     });
 

@@ -39,7 +39,7 @@
         }
 
         /* define o tamanho e organiza os elementos do cartao */
-        .card {
+        .cartao-principal {
             width: 100%;
             max-width: 380px;
             display: flex;
@@ -49,7 +49,7 @@
         }
 
         /* define o tamanho e o espacamento da logo */
-        .logo {
+        .logo-quiri {
             width: 190px;
             height: auto;
             display: block;
@@ -57,7 +57,7 @@
         }
 
         /* estiliza o texto abaixo da logo */
-        .tagline {
+        .frase-destaque {
             font-family: 'Caveat', cursive;
             font-weight: 600;
             font-size: 1.55rem;
@@ -78,7 +78,7 @@
         }
 
         /* estiliza a mensagem de cadastro realizado */
-        .message {
+        .mensagem-cadastro {
             color: #456854;
             font-size: .78rem;
             line-height: 1.7;
@@ -87,7 +87,7 @@
         }
 
         /* cria a caixa q mostra o email cadastrado */
-        .email-box {
+        .caixa-email {
             width: 100%;
             padding: 14px 16px;
             border-radius: 8px;
@@ -102,7 +102,7 @@
         }
 
         /* estiliza o botao de ir pro login */
-        .btn-primary {
+        .botao-principal {
             width: 100%;
             height: 54px;
             border: none;
@@ -122,7 +122,7 @@
         }
 
         /* muda o visual do botao qdo passa o mouse */
-        .btn-primary:hover {
+        .botao-principal:hover {
             background: #103420;
             transform: translateY(-1px);
             box-shadow:
@@ -130,25 +130,17 @@
         }
 
         /* tira o movimento do botao qdo ele e clicado */
-        .btn-primary:active {
+        .botao-principal:active {
             transform: translateY(0);
-        }
-
-        /* estiliza o texto de retorno */
-        .back-text {
-            margin-top: 22px;
-            font-size: .7rem;
-            color: #456854;
-            letter-spacing: .04em;
         }
 
         /* diminui alguns elementos em telas pequenas */
         @media (max-width:340px) {
-            .logo {
+            .logo-quiri {
                 width: 160px;
             }
 
-            .tagline {
+            .frase-destaque {
                 font-size: 1.35rem;
             }
         }
@@ -164,10 +156,10 @@
 <body>
 
     <!-- conteudo principal da pagina -->
-    <main class="card">
+    <main class="cartao-principal">
 
         <!-- mostra a logo do quiri -->
-        <img class="logo" src="../imagens/logoquiri.png" alt="logo quiri">
+        <img class="logo-quiri" src="../imagens/logoquiri.png" alt="logo quiri">
 
         <!-- mostra o titulo de cadastro realizado -->
         <h2>
@@ -175,19 +167,20 @@
         </h2>
 
         <!-- informa q a conta foi criada -->
-        <p class="message">
+        <p class="mensagem-cadastro">
             Sua conta de nutricionista foi criada com sucesso.
         </p>
 
         <!-- mostra o email usado no cadastro -->
-        <p id="emailUsuario" class="email-box">
+        <p id="emailUsuario" class="caixa-email">
         </p>
 
         <!-- leva o usuario de volta pra tela de login -->
-        <button class="btn-primary" onclick="irParaLogin()">
+        <button class="botao-principal" onclick="irParaLogin()">
             Ir para o login
         </button>
     </main>
+
     <script>
 
         // pega o email enviado pela url

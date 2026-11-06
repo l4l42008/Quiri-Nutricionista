@@ -66,54 +66,11 @@ body {
   cursor: pointer;
 }
 
-/* botao de voltar */
-.topbar-back {
-  background: none;
-  border: none;
-  color: #F5EFE0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  text-decoration: none;
-}
-
 /* area principal de apresentacao */
 .hero {
   background: #2D6A4F;
   padding: 0 40px 30px;
   color: #F5EFE0;
-}
-
-/* saudacao no topo da apresentacao */
-.hero-greeting {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 4px;
-}
-
-/* nome mostrado na apresentacao */
-.hero-name {
-  font-size: 28px;
-  font-weight: 500;
-}
-
-/* texto abaixo do nome */
-.hero-sub {
-  font-size: 14px;
-  opacity: 0.7;
-  margin-top: 4px;
-}
-
-/* identificacao mostrada na apresentacao */
-.hero-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 5px 12px;
-  font-size: 12px;
-  margin-top: 8px;
 }
 
 /* onda abaixo da apresentacao */
@@ -122,36 +79,6 @@ body {
   height: 30px;
   display: block;
   flex-shrink: 0;
-}
-
-/* cabecalho das telas de login e cadastro */
-.auth-hero {
-  background: #2D6A4F;
-  padding: 50px 40px 35px;
-  color: #F5EFE0;
-  text-align: center;
-}
-
-/* titulo das telas de login e cadastro */
-.auth-hero-title {
-  font-size: 28px;
-  font-weight: 600;
-  margin-top: 12px;
-}
-
-/* subtitulo das telas de login e cadastro */
-.auth-hero-sub {
-  font-size: 14px;
-  opacity: 0.75;
-  margin-top: 6px;
-}
-
-/* area dos formularios */
-.auth-body {
-  flex: 1;
-  padding: 40px;
-  background: #F5EFE0;
-  overflow-y: auto;
 }
 
 /* titulo dentro dos formularios */
@@ -358,14 +285,6 @@ body {
   padding-bottom: 100px;
 }
 
-/* linha de cards */
-.cards-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-bottom: 25px;
-}
-
 /* card principal */
 .card {
   background: #fff;
@@ -382,62 +301,6 @@ body {
 /* efeito ao clicar no card */
 .card:active {
   transform: scale(0.97);
-}
-
-/* area do icone do card */
-.card-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: #E8F5EE;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* icone dentro do card */
-.card-icon i {
-  font-size: 21px;
-  color: #2D6A4F;
-}
-
-/* nome do card */
-.card-label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #1B4332;
-  line-height: 1.3;
-}
-
-/* texto menor do card */
-.card-sub {
-  font-size: 12px;
-  color: #6B9C84;
-}
-
-/* card que ocupa toda a linha */
-.card-wide {
-  grid-column: 1 / -1;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-}
-
-/* icone do card maior */
-.card-wide .card-icon {
-  width: 50px;
-  height: 50px;
-  flex-shrink: 0;
-}
-
-/* icone dentro do card maior */
-.card-wide .card-icon i {
-  font-size: 25px;
-}
-
-/* texto do card maior */
-.card-wide .card-text {
-  flex: 1;
 }
 
 /* linha de estatisticas */
@@ -536,12 +399,6 @@ body {
   color: #2D6A4F;
 }
 
-/* etiqueta de alerta */
-.badge-warn {
-  background: #fef3e2;
-  color: #8a5c00;
-}
-
 /* bloco da agenda */
 .sched-block {
   background: #fff;
@@ -549,72 +406,6 @@ body {
   padding: 18px;
   border: 0.5px solid #c8dfd4;
   margin-bottom: 20px;
-}
-
-/* linha dos dias do calendario */
-.cal-row {
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-
-/* bloco de cada dia */
-.cal-day {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-
-/* nome do dia */
-.cal-day-name {
-  font-size: 11px;
-  color: #6B9C84;
-  text-transform: uppercase;
-}
-
-/* numero do dia */
-.cal-day-num {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-/* dia disponivel */
-.cal-avail {
-  background: #E8F5EE;
-  color: #2D6A4F;
-}
-
-/* dia ocupado */
-.cal-busy {
-  background: #fef3e2;
-  color: #8a5c00;
-}
-
-/* dia sem horario disponivel */
-.cal-full {
-  background: #f0e8e8;
-  color: #c0625a;
-}
-
-/* dia atual */
-.cal-today {
-  background: #2D6A4F;
-  color: #fff;
-}
-
-/* dia sem destaque */
-.cal-neutral {
-  color: #aaa;
 }
 
 /* linha de consulta */
@@ -673,65 +464,6 @@ body {
   color: #c0625a;
 }
 
-/* cabecalho do paciente da dieta */
-.diet-patient-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-/* etiqueta da dieta */
-.diet-badge {
-  background: #E8F5EE;
-  color: #2D6A4F;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 4px 11px;
-  border-radius: 20px;
-}
-
-/* linha da refeicao */
-.meal-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 0.5px solid #eef4f0;
-}
-
-/* ultima linha da refeicao */
-.meal-row:last-child {
-  border-bottom: none;
-}
-
-/* ponto da refeicao */
-.meal-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #2D6A4F;
-  flex-shrink: 0;
-}
-
-/* ponto alternativo da refeicao */
-.meal-dot.alt {
-  background: #95C9A8;
-}
-
-/* nome da refeicao */
-.meal-name {
-  font-size: 14px;
-  color: #1B4332;
-  flex: 1;
-}
-
-/* quantidade de calorias */
-.meal-kcal {
-  font-size: 12px;
-  color: #6B9C84;
-}
-
 /* item do relatorio */
 .report-item {
   background: #fff;
@@ -778,27 +510,6 @@ body {
 .report-date {
   font-size: 12px;
   color: #6B9C84;
-}
-
-/* botoes do relatorio */
-.report-actions {
-  display: flex;
-  gap: 8px;
-}
-
-/* area do leitor */
-.scanner-box {
-  background: #fff;
-  border-radius: 14px;
-  padding: 30px;
-  border: 0.5px solid #c8dfd4;
-  text-align: center;
-  margin-bottom: 20px;
-  min-height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 /* item de feedback */
@@ -891,72 +602,9 @@ body {
   color: #2D6A4F;
 }
 
-/* resultado das informacoes nutricionais */
-.nutri-result {
-  background: #fff;
-  border-radius: 14px;
-  padding: 18px;
-  border: 0.5px solid #c8dfd4;
-  margin-top: 15px;
-  display: none;
-}
-
-/* aviso de compatibilidade */
-.compat-ok {
-  background: #E8F5EE;
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 12px;
-  color: #2D6A4F;
-  margin-top: 12px;
-}
-
-/* barra de forca da senha */
-.pw-strength {
-  height: 4px;
-  border-radius: 2px;
-  margin-top: 6px;
-  transition: width 0.3s;
-  background: #c8dfd4;
-}
-
-/* preenchimento da barra de forca da senha */
-.pw-strength-bar {
-  height: 4px;
-  border-radius: 2px;
-  width: 0;
-  transition: width 0.3s, background 0.3s;
-}
-
-/* aviso de sucesso em linha */
-.inline-ok {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: #E8F5EE;
-  border-radius: 20px;
-  padding: 4px 10px;
-  font-size: 12px;
-  color: #2D6A4F;
-  margin-top: 10px;
-}
-
 /* campos de selecao */
 select.field-input {
   appearance: none;
-}
-
-/* botoes das abas */
-.tab-btn {
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  padding: 10px 18px;
-  font-size: 14px;
-  color: #6B9C84;
-  cursor: pointer;
-  font-family: inherit;
-  white-space: nowrap;
 }
 
 /* aba selecionada */
@@ -972,11 +620,6 @@ select.field-input {
   /* container principal em telas menores */
   .app {
     max-width: 100%;
-  }
-
-  /* cards em duas colunas */
-  .cards-row {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   /* estatisticas em duas colunas */
@@ -1020,11 +663,6 @@ select.field-input {
     padding: 0 16px 24px;
   }
 
-  /* tamanho do nome na apresentacao */
-  .hero-name {
-    font-size: 20px;
-  }
-
   /* espaco do cabecalho de autenticacao */
   .auth-hero {
     padding: 32px 24px 28px;
@@ -1038,12 +676,6 @@ select.field-input {
   /* espaco das secoes no celular */
   .section {
     padding: 16px 16px 0;
-  }
-
-  /* cards em duas colunas no celular */
-  .cards-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
   }
 
   /* estatisticas em duas colunas no celular */
