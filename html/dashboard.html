@@ -148,39 +148,6 @@
             padding-top: 0 !important;
         }
 
-        /* lista de temas disponiveis */
-        .config-temas {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        /* botao de cada tema */
-        .config-tema {
-            border: 1px solid #c8dfd4;
-            background: #fff;
-            border-radius: 10px;
-            padding: 10px;
-            cursor: pointer;
-            text-align: center;
-            font-family: inherit;
-            font-size: 11px;
-        }
-
-        /* bolinha que mostra a cor do tema */
-        .config-cor {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin: 0 auto 6px;
-        }
-
-        /* tema que esta selecionado */
-        .config-tema.active {
-            border: 2px solid #2D6A4F;
-        }
-
         /* mensagem para listas sem dados */
         .lista-vazia {
             text-align: center;
@@ -317,32 +284,6 @@
                 </button>
 
                 <h3>Configurações</h3>
-
-                <div style="
-            font-size:13px;
-            font-weight:600;
-            color:#1B4332;
-            margin-bottom:8px;
-            ">
-                    Aparência
-                </div>
-
-                <div style="
-            font-size:12px;
-            color:#6B9C84;
-            margin-bottom:12px;
-            ">
-                    Escolha a cor principal do Quiri
-                </div>
-
-                <div class="config-temas">
-
-                    <div class="config-tema active" id="tema-verde">
-                        <div class="config-cor" style="background:#2D6A4F;"></div>
-                        Verde
-                    </div>
-
-                </div>
 
                 <button class="btn-green" style="flex:1;
             background:#dc3545;" onclick="sairDaConta()">
