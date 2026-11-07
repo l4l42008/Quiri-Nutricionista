@@ -49,22 +49,11 @@
         }
 
         /* define o tamanho e o espacamento da logo */
-        .logo-quiri {
+        .logo {
             width: 190px;
             height: auto;
             display: block;
             margin: 0 auto 30px;
-        }
-
-        /* estiliza o texto abaixo da logo */
-        .frase-destaque {
-            font-family: 'Caveat', cursive;
-            font-weight: 600;
-            font-size: 1.55rem;
-            color: #456854;
-            text-align: center;
-            margin-bottom: 34px;
-            letter-spacing: .01em;
         }
 
         /* estiliza o titulo da pagina */
@@ -78,7 +67,7 @@
         }
 
         /* estiliza a mensagem de cadastro realizado */
-        .mensagem-cadastro {
+        .mensagem {
             color: #456854;
             font-size: .78rem;
             line-height: 1.7;
@@ -87,7 +76,7 @@
         }
 
         /* cria a caixa q mostra o email cadastrado */
-        .caixa-email {
+        .email-caixa {
             width: 100%;
             padding: 14px 16px;
             border-radius: 8px;
@@ -136,19 +125,9 @@
 
         /* diminui alguns elementos em telas pequenas */
         @media (max-width:340px) {
-            .logo-quiri {
+            .logo {
                 width: 160px;
             }
-
-            .frase-destaque {
-                font-size: 1.35rem;
-            }
-        }
-
-        /* mostra um contorno qdo um elemento recebe foco pelo teclado */
-        :focus-visible {
-            outline: 2px solid #456854;
-            outline-offset: 2px;
         }
     </style>
 </head>
@@ -159,7 +138,7 @@
     <main class="cartao-principal">
 
         <!-- mostra a logo do quiri -->
-        <img class="logo-quiri" src="../imagens/logoquiri.png" alt="logo quiri">
+        <img class="logo" src="../imagens/logoquiri.png" alt="logo quiri">
 
         <!-- mostra o titulo de cadastro realizado -->
         <h2>
@@ -167,12 +146,12 @@
         </h2>
 
         <!-- informa q a conta foi criada -->
-        <p class="mensagem-cadastro">
+        <p class="mensagem">
             Sua conta de nutricionista foi criada com sucesso.
         </p>
 
         <!-- mostra o email usado no cadastro -->
-        <p id="emailUsuario" class="caixa-email">
+        <p id="emailUsuario" class="email-caixa">
         </p>
 
         <!-- leva o usuario de volta pra tela de login -->
@@ -180,7 +159,7 @@
             Ir para o login
         </button>
     </main>
-
+    
     <script>
 
         // pega o email enviado pela url

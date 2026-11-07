@@ -16,7 +16,7 @@
 
     <style>
         /* barra do topo */
-        .topbar {
+        .barra-topo {
             position: relative;
             width: 100%;
             height: 108px;
@@ -30,7 +30,7 @@
         }
 
         /* infos do nutricionista no topo */
-        .topbar-info {
+        .barra-topo-info {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -38,7 +38,7 @@
         }
 
         /* mensagem de saudacao */
-        .topbar-greeting {
+        .barra-topo-greeting {
             color: #F5EFE0;
             font-size: 13px;
             line-height: 1.2;
@@ -47,7 +47,7 @@
         }
 
         /* nome mostrado no topo */
-        .topbar-name {
+        .barra-topo-name {
             color: #F5EFE0;
             font-size: 25px;
             font-weight: 700;
@@ -56,7 +56,7 @@
         }
 
         /* crn mostrado no topo */
-        .topbar-crn {
+        .barra-topo-crn {
             color: #F5EFE0;
             font-size: 12px;
             line-height: 1;
@@ -64,7 +64,7 @@
         }
 
         /* area da logo */
-        .topbar-logo {
+        .barra-topo-logo {
             width: 64px;
             height: 64px;
             display: flex;
@@ -73,13 +73,13 @@
         }
 
         /* tamanho da logo */
-        .topbar-logo svg {
+        .barra-topo-logo svg {
             width: 56px;
             height: 56px;
         }
 
         /* acoes do lado direito */
-        .topbar-right {
+        .barra-topo-right {
             display: flex;
             align-items: center;
             justify-content: flex-end;
@@ -87,7 +87,7 @@
         }
 
         /* icones das acoes do topo */
-        .topbar-right i {
+        .barra-topo-right i {
             color: #F5EFE0;
             font-size: 21px;
             cursor: pointer;
@@ -95,7 +95,7 @@
         }
 
         /* efeito ao passar o mouse nos icones */
-        .topbar-right i:hover {
+        .barra-topo-right i:hover {
             opacity: .75;
             transform: translateY(-1px);
         }
@@ -113,31 +113,6 @@
             z-index: 10;
             display: grid !important;
             grid-template-columns: repeat(5, 1fr) !important;
-        }
-
-        /* ordem do primeiro item da navegacao */
-        .bottom-nav .nav-item:nth-child(1) {
-            order: 1;
-        }
-
-        /* ordem do segundo item da navegacao */
-        .bottom-nav .nav-item:nth-child(2) {
-            order: 2;
-        }
-
-        /* ordem do terceiro item da navegacao */
-        .bottom-nav .nav-item:nth-child(3) {
-            order: 3;
-        }
-
-        /* ordem do quarto item da navegacao */
-        .bottom-nav .nav-item:nth-child(4) {
-            order: 4;
-        }
-
-        /* ordem do quinto item da navegacao */
-        .bottom-nav .nav-item:nth-child(5) {
-            order: 5;
         }
 
         .hero,
@@ -179,27 +154,21 @@
             font-size: 11px;
         }
 
-        /* estilo do paciente inativo */
-        .patient-badge.badge-inativo {
-            background: #f1f1f1;
-            color: #777;
-        }
-
         /* ajustes pra telas menores */
         @media (max-width: 700px) {
 
             /* barra do topo */
-            .topbar {
+            .barra-topo {
                 padding: 0 18px;
             }
 
             /* nome mostrado no topo */
-            .topbar-name {
+            .barra-topo-name {
                 font-size: 19px;
             }
 
             /* acoes do lado direito */
-            .topbar-right {
+            .barra-topo-right {
                 gap: 12px;
             }
 
@@ -875,26 +844,26 @@
         </div>
 
         <!-- topbar -->
-        <div class="topbar">
+        <div class="barra-topo">
 
-            <div class="topbar-info">
+            <div class="barra-topo-info">
 
-                <div class="topbar-greeting">
+                <div class="barra-topo-greeting">
                     Olá, Dr(a).
                 </div>
 
-                <div class="topbar-name" id="nomeNutricionista">
+                <div class="barra-topo-name" id="nomeNutricionista">
                     Carregando...
                 </div>
 
-                <div class="topbar-crn" id="dadosNutricionista">
+                <div class="barra-topo-crn" id="dadosNutricionista">
                     Carregando dados...
                 </div>
 
             </div>
 
-            <div class="topbar-logo">
-                <img src="../imagens/logobranca.png" alt="logo quiri" class="topbar-logo">
+            <div class="barra-topo-logo">
+                <img src="../imagens/logobranca.png" alt="logo quiri" class="barra-topo-logo">
 
                 <line x1="49" y1="35" x2="55" y2="41" stroke="#F5EFE0" stroke-width="3" stroke-linecap="round" />
 
@@ -904,7 +873,7 @@
 
             </div>
 
-            <div class="topbar-right">
+            <div class="barra-topo-right">
 
                 <i class="ti ti-user-circle" onclick="abrirPerfil()" title="Meu perfil"></i>
 

@@ -39,7 +39,7 @@
     }
 
     /* organiza o formulario de login */
-    .cartao-principal {
+    .cartao {
       width: 100%;
       max-width: 380px;
       display: flex;
@@ -114,7 +114,6 @@
       font-weight: 700;
       font-size: .74rem;
       letter-spacing: .12em;
-      text-transform: uppercase;
     }
 
     /* texto q aparece antes de digitar */
@@ -136,37 +135,12 @@
       transition: opacity .15s ease;
     }
 
-    /* efeito do botao da senha */
-    .alternar-senha:hover {
-      opacity: 1;
-    }
-
-    /* linha com opcoes do login */
-    .linha-opcoes {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 2px 2px 0;
-      font-size: .7rem;
-      letter-spacing: .04em;
-    }
-
     /* mensagem de erro */
     .mensagem-erro {
       display: none;
       color: #c0625a;
       margin-top: 5px;
       font-size: 14px;
-    }
-
-    /* mostra a mensagem de erro */
-    .mensagem-erro.exibir {
-      display: block;
-    }
-
-    /* destaca o campo com erro */
-    .campo-com-erro {
-      border: 1px solid #c0625a !important;
     }
 
     /* link de esqueci a senha */
@@ -282,17 +256,11 @@
         font-size: 1.35rem;
       }
     }
-
-    /* destaque de acessibilidade ao navegar pelo teclado */
-    :focus-visible {
-      outline: 2px solid #456854;
-      outline-offset: 2px;
-    }
   </style>
 </head>
 
 <body>
-  <main class="cartao-principal">
+  <main class="cartao">
 
     <!-- logo -->
     <img class="logo-quiri" src="/imagens/logoquiri.png" alt="logo quiri">

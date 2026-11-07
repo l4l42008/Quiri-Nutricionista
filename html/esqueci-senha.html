@@ -39,7 +39,7 @@
         }
 
         /* bloco principal da pagina */
-        .cartao-principal {
+        .cartao {
             width: 100%;
             max-width: 380px;
             display: flex;
@@ -56,7 +56,7 @@
         }
 
         /* titulo da pagina */
-        .titulo-pagina {
+        .titulo {
             width: 100%;
             text-align: center;
             color: #18482d;
@@ -83,16 +83,6 @@
             display: flex;
             flex-direction: column;
             gap: 14px;
-        }
-
-        /* esconde o label sem tirar ele da acessibilidade */
-        .campo-formulario label {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            clip: rect(0 0 0 0);
-            white-space: nowrap;
         }
 
         /* caixa do campo */
@@ -158,11 +148,6 @@
             display: block;
         }
 
-        /* destaca o campo com erro */
-        .campo-com-erro {
-            border: 1px solid #c0625a !important;
-        }
-
         /* botao principal */
         .botao-principal {
             margin-top: 10px;
@@ -224,11 +209,11 @@
 <body>
 
     <!-- conteudo principal da pagina -->
-    <main class="cartao-principal">
+    <main class="cartao">
         <img class="logo-quiri" src="/imagens/logoquiri.png" alt="logo quiri">
 
         <!-- titulo -->
-        <h1 class="titulo-pagina">
+        <h1 class="titulo">
             Redefinir senha
         </h1>
 

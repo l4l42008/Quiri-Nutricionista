@@ -133,11 +133,11 @@ app.post(
             }
 
             // verifica o limite de caracteres do telefone
-            if (telefone.length > 15) {
+            if (telefone.length > 11) {
 
                 return res.status(400).json({
                     mensagem:
-                        "O telefone deve ter no máximo 15 caracteres."
+                        "O telefone deve ter no máximo 11 caracteres."
                 });
 
             }
@@ -883,13 +883,13 @@ app.put(
 
             // verifica o limite de caracteres do telefone
             if (
-                telefone.length > 15
+                telefone.length > 11
             ) {
 
                 return res.status(400).json({
 
                     mensagem:
-                        "O telefone deve ter no máximo 15 caracteres."
+                        "O telefone deve ter no máximo 11 caracteres."
 
                 });
 

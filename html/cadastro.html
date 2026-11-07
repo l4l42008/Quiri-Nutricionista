@@ -39,7 +39,7 @@
         }
 
         /* define o tamanho e a organizacao do cartao */
-        .cartao-principal {
+        .cartao {
             width: 100%;
             max-width: 380px;
             display: flex;
@@ -55,19 +55,8 @@
             margin: 0 auto 20px;
         }
 
-        /* estiliza o texto abaixo da logo */
-        .frase-destaque {
-            font-family: 'Caveat', cursive;
-            font-weight: 600;
-            font-size: 1.55rem;
-            color: #456854;
-            text-align: center;
-            margin-bottom: 30px;
-            letter-spacing: .01em;
-        }
-
         /* estiliza o titulo do cadastro */
-        .cadastro-titulo {
+        .titulo {
             color: #18482d;
             font-size: 1.15rem;
             font-weight: 800;
@@ -307,35 +296,14 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* mostra um contorno qdo um elemento recebe foco */
-        :focus-visible {
-            outline: 2px solid #456854;
-            outline-offset: 2px;
-        }
-
         /* ajusta a pagina pra telas bem pequenas */
         @media (max-width:340px) {
             .logo-quiri {
                 width: 160px;
             }
 
-            .frase-destaque {
-                font-size: 1.35rem;
-            }
-
             body {
                 padding: 30px 16px;
-            }
-        }
-
-        /* desativa as animacoes pra qm prefere menos movimento */
-        @media (prefers-reduced-motion:reduce) {
-
-            .botao-principal,
-            .caixa-campo,
-            .notificacao,
-            #pw-bar {
-                transition: none;
             }
         }
     </style>
@@ -344,13 +312,13 @@
 <body>
 
     <!-- conteudo principal da tela de cadastro -->
-    <main class="cartao-principal">
+    <main class="cartao">
 
         <!-- mostra a logo do quiri -->
         <img class="logo-quiri" src="../imagens/logoquiri.png" alt="logo quiri">
 
         <!-- mostra o titulo da tela -->
-        <h2 class="cadastro-titulo">
+        <h2 class="titulo">
             Cadastro Nutricionista
         </h2>
 
@@ -441,7 +409,7 @@
                     <i class="icone-campo fa-solid fa-phone" aria-hidden="true">
                     </i>
 
-                    <input type="tel" id="cad-tel" placeholder="TELEFONE" maxlength="15" autocomplete="tel">
+                    <input type="tel" id="cad-tel" placeholder="TELEFONE" maxlength="11" autocomplete="tel">
                 </div>
             </div>
 
